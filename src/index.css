@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Gorditas-regular', sans-serif ;
+  width: 100dvw;
+  background-color: #dfdff0;
+  overflow-x: hidden;
+}
+
+@layer base{
+  @font-face {
+    font-family: 'MeaCulpa-regular' ;
+    font-display: swap;
+    src: url('/src/assets/fonts/MeaCulpa-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family:'Gorditas-regular';
+    font-display: swap;
+    src: url('/src/assets/fonts/Gorditas-regular.ttf') format('truetype');
+  }
+}
+
+@theme {
+  --font-meaculpa: "MeaCulpa-regular", sans-serif;
+  --font-gorditas: "Gorditas-regular", sans-serif;
+}
+
+
+@layer utilities {
+  .mask-clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
