@@ -12,7 +12,7 @@ const Hero = () => {
   const [hasClicked, setHasClicked] = useState(false);
   // const [loading, setLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
-  const [backgroundVideoSrc, setBackgroundVideoSrc] = useState("/public/videos/yvonne-1.mp4"); // State for background video source
+  const [backgroundVideoSrc, setBackgroundVideoSrc] = useState("videos/yvonne-1.mp4"); // State for background video source
   const [showValentine, setShowValentine] = useState(false);
   const [clickedYes, setClickedYes] = useState(false);
   const [clickedNo, setClickedNo] = useState(false);
@@ -23,7 +23,7 @@ const Hero = () => {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    audioRef.current = new Audio("/public/audios/wisp.mp3"); // Load the audio file
+    audioRef.current = new Audio("audios/wisp.mp3"); // Load the audio file
     audioRef.current.loop = true; // Ensure it loops forever
     audioRef.current.volume = 0.4
   }, []);
